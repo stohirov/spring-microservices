@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  service-registry:
+    image: service-registry:latest
+    container_name: service-registry
+    build: .
+    ports:
+      - "8761:8761"
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
